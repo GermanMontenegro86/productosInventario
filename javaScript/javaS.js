@@ -32,7 +32,7 @@ let buscarPorNombre=prompt("buscar producto shampoo");
 buscarPorNombre =producto.find((el) => el.nombre === "shampoo");
 console.log(buscarPorNombre);
 
- let BuscarMenorPrecio=+prompt("buscar menor precio que 130");
+ let BuscarMenorPrecio=+prompt("buscar menor precio entre $120 y $130 ");
  BuscarMenorPrecio=producto.filter((el) => el.precio < 130);
  console.log(BuscarMenorPrecio);
 
@@ -43,16 +43,6 @@ console.log(buscarPorNombre);
  let noHay=+prompt("buscar si hay arroz");
  noHay=producto.some((el)=> el.nombre == "arroz");
  console.log(noHay);
-
-
-
-
-// console.log(buscarPorNombre);
-// console.log(BuscarMenorPrecio);
-// console.log(siHay);
-// console.log(noHay);
-// console.log(verProductosCargados);
-
 
 }
 
