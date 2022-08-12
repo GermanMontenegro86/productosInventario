@@ -8,29 +8,54 @@ const producto =
     {nombre:"coca cola", precio:400, stock:100, vto:"20/10/2026"},
 ]
 
+
+
 producto.push({nombre:"alfajor", precio:120, stock:18, vto:"15/09/2025"},)
 producto.push({nombre:"shampoo", precio:290, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"cereal", precio:300, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"chocolate en barra", precio:150, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"fideos moños", precio:130, stock:35, vto:"11/05/2028"},)
 
-const buscarPorNombre = producto.find((el) => el.nombre === "shampoo");
-const BuscarMenorPrecio = producto.filter((el) => el.precio < 131);
-const siHay= producto.some((el)=> el.nombre == "chocolate en barra");
-const noHay=producto.some((el)=> el.nombre == "arroz");
-const verProductosCargados =producto.map((el) =>el.nombre);
+// const buscarPorNombre = producto.find((el) => el.nombre === "shampoo");
+// const BuscarMenorPrecio = producto.filter((el) => el.precio < 131);
+// const siHay= producto.some((el)=> el.nombre == "chocolate en barra");
+// const noHay=producto.some((el)=> el.nombre == "arroz");
+// const verProductosCargados =producto.map((el) =>el.nombre);
 
 
 function boton(){
 
+   
 console.log(producto);
+
+let buscarPorNombre=prompt("buscar producto shampoo");
+buscarPorNombre =producto.find((el) => el.nombre === "shampoo");
 console.log(buscarPorNombre);
-console.log(BuscarMenorPrecio);
-console.log(siHay);
-console.log(noHay);
-console.log(verProductosCargados);
+
+ let BuscarMenorPrecio=+prompt("buscar menor precio que 130");
+ BuscarMenorPrecio=producto.filter((el) => el.precio < 130);
+ console.log(BuscarMenorPrecio);
+
+ let siHay=+prompt("buscar si hay chocolate en barra");
+ siHay=producto.some((el)=> el.nombre == "chocolate en barra");
+ console.log(siHay);
+
+ let noHay=+prompt("buscar si hay arroz");
+ noHay=producto.some((el)=> el.nombre == "arroz");
+ console.log(noHay);
+
+
+
+
+// console.log(buscarPorNombre);
+// console.log(BuscarMenorPrecio);
+// console.log(siHay);
+// console.log(noHay);
+// console.log(verProductosCargados);
+
 
 }
+
 
 /*
 hola gonzalo si me podrias explicar como aplicar lo que hice arriba con lo que esta comentado abajo de estas
