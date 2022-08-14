@@ -8,13 +8,12 @@ const producto =
     {nombre:"coca cola", precio:400, stock:100, vto:"20/10/2026"},
 ]
 
-
-
 producto.push({nombre:"alfajor", precio:120, stock:18, vto:"15/09/2025"},)
 producto.push({nombre:"shampoo", precio:290, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"cereal", precio:300, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"chocolate en barra", precio:150, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"fideos moños", precio:130, stock:35, vto:"11/05/2028"},)
+
 
 // const buscarPorNombre = producto.find((el) => el.nombre === "shampoo");
 // const BuscarMenorPrecio = producto.filter((el) => el.precio < 131);
@@ -24,26 +23,22 @@ producto.push({nombre:"fideos moños", precio:130, stock:35, vto:"11/05/2028"},)
 
 
 function boton(){
+    
+    console.log(producto);
+}
 
-   
-console.log(producto);
+function buscar(){
 
-let buscarPorNombre=prompt("buscar producto shampoo");
-buscarPorNombre =producto.find((el) => el.nombre === "shampoo");
+let buscarPorNombre=prompt("buscar nombre");
+buscarPorNombre =producto.find((el) => el.nombre === buscarPorNombre);
 console.log(buscarPorNombre);
 
- let BuscarMenorPrecio=+prompt("buscar menor precio entre $120 y $130 ");
- BuscarMenorPrecio=producto.filter((el) => el.precio < 130);
- console.log(BuscarMenorPrecio);
+}
 
- let siHay=+prompt("buscar si hay chocolate en barra");
- siHay=producto.some((el)=> el.nombre == "chocolate en barra");
- console.log(siHay);
-
- let noHay=+prompt("buscar si hay arroz");
- noHay=producto.some((el)=> el.nombre == "arroz");
- console.log(noHay);
-
+function menorPrecio(){
+    let BuscarMenorPrecio=+("buscar menor el menor precio de todos los productos");
+    BuscarMenorPrecio=producto.filter((el) => el.precio < 130);
+    console.log(BuscarMenorPrecio);
 }
 
 
