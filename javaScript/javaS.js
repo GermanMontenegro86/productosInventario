@@ -13,6 +13,7 @@ producto.push({nombre:"shampoo", precio:290, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"cereal", precio:300, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"chocolate en barra", precio:150, stock:33, vto:"11/05/2028"},)
 producto.push({nombre:"fideos moños", precio:130, stock:35, vto:"11/05/2028"},)
+producto.push({nombre:"caramelos", precio:1, stock:30, vto:"11/05/2030"},)
 
 
 // const buscarPorNombre = producto.find((el) => el.nombre === "shampoo");
@@ -36,8 +37,8 @@ console.log(buscarPorNombre);
 }
 
 function menorPrecio(){
-    let BuscarMenorPrecio=+("buscar menor el menor precio de todos los productos");
-    BuscarMenorPrecio=producto.filter((el) => el.precio < 130);
+    let BuscarMenorPrecio=+prompt("Cuanto queres gastar y te dire que podras comprar");
+    BuscarMenorPrecio=producto.filter((el) => el.precio <= BuscarMenorPrecio);
     console.log(BuscarMenorPrecio);
 }
 
